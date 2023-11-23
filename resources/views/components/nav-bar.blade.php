@@ -1,7 +1,7 @@
 <div>
     <div class="flex sm:justify-center">
         {{-- TODO Agregar animación de hover a los botones --}}
-        <nav x-data="{ showMenu: false, isLoged: false }"
+        <nav x-data="{ showMenu: false }"
             class="fixed top-0 sm:top-2 w-full sm:w-auto lg:w-3/4 p-2 sm:mx-4 bg-yellow-logo text-white opacity-90 sm:rounded-full">
             <section class="w-full grid grid-cols-3 md:grid-cols-6">
                 {{-- Logo  --}}
@@ -14,23 +14,18 @@
                 <article class="hidden sm:flex sm:mx-4 sm:justify-center font-bold col-span-4">
                     <div class="hidden md:flex">
                         <button class="text-blue-900 text-lg bg-transparent px-3 py-1 rounded">
-                            Tradicionales
+                            Menú
                         </button>
-
-                        <!-- Botón Comiige -->
                         <button class="text-blue-900 text-lg bg-transparent px-3 py-1 rounded">
-                            Especiales
+                            Categorías
                         </button>
-
-                        <!-- Botón Drenotzine -->
                         <button class="text-blue-900 text-xl bg-transparent px-3 py-1 rounded">
-                            Adicionales
+                            Nosotros
                         </button>
                     </div>
                 </article>
                 {{-- Botón menú colapsable --}}
-                <article x-show="isLoged"
-                    class="col-start-3 sm:col-start-6 flex items-center justify-end sm:justify-center md:hidden">
+                <article class="col-start-3 sm:col-start-6 flex items-center justify-end sm:justify-center md:hidden">
                     <button @click="showMenu = ! showMenu"
                         class="inline-flex items-center justify-center p-2 rounded-md text-blue-logo bg-yellow-200">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -105,7 +100,7 @@
                             </div>
                         </article>
                     @else
-                        <article x-show="!isLoged"
+                        <article
                             class="text-right self-center font-bold col-span-1 text-blue-900 text-lg bg-transparent px-3 py-1 rounded">
                             <a href="{{ route('login') }}" class=" hover:text-gray-600">Login</a>
                             @if (Route::has('register'))
