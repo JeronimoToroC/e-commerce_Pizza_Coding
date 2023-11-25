@@ -17,7 +17,7 @@
 
 <body class="font-roboto antialiased">
 
-    <div class="min-h-scree">
+    <div class="min-h-scree bg-yellow-50">
         <x-nav-bar />
         {{-- @livewire('navigation-menu') --}}
         <!-- Page Content -->
@@ -29,6 +29,7 @@
     @stack('modals')
 
     @livewireScripts
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </body>
 
 </html>
