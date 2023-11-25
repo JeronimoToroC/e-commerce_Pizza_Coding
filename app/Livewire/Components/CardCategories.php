@@ -3,14 +3,12 @@
 namespace App\Livewire\Components;
 
 use Livewire\Component;
-
+use App\Models\Category;
 class CardCategories extends Component
 {
-    public $title;
-    public $description;
-
     public function render()
     {
-        return view('livewire.components.card-categories');
+        $categories = Category::all();
+        return view('livewire.components.card-categories', compact('categories'));
     }
 }

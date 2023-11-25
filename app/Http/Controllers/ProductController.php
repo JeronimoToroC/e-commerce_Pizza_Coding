@@ -11,9 +11,10 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
-    }
+{
+    $products = Product::all(); // Obtener todos los productos
+    return view('products.index', compact('products')); // Pasar productos a la vista
+}
 
     /**
      * Show the form for creating a new resource.
