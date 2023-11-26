@@ -9,6 +9,7 @@ Route::get('/', function () {
 
 
 Route::get('/menu', [ProductController::class, 'index'])->name('menu');
+Route::get('/menu/{slug}', [ProductController::class, 'show'])->name('products.show');
 
 Route::middleware([
     'auth:sanctum',

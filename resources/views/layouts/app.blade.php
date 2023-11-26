@@ -17,7 +17,7 @@
 
 <body class="font-roboto antialiased">
 
-    <div class="min-h-scree bg-yellow-50">
+    <div class="h-scree bg-yellow-100">
         <x-nav-bar />
         {{-- @livewire('navigation-menu') --}}
         <!-- Page Content -->
