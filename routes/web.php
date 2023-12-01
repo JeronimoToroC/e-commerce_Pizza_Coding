@@ -12,8 +12,6 @@ Route::get('/', function () {
 
 Route::get('/menu', [ProductController::class, 'index'])->name('menu');
 Route::get('/menu/{slug}', [ProductController::class, 'show'])->name('products.show');
-Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-
 
 Route::middleware([
     'auth:sanctum',
@@ -24,8 +22,8 @@ Route::middleware([
         return view('home');
     })->name('home');
 
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::resource('/products', ProductController::class)->names('products');
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     // Route::resource('/users', UserController::class)->names('users');
     Route::resource('/categories', CategoryController::class)->names('categories');
 });

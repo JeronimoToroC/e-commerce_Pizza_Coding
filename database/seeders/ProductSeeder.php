@@ -17,7 +17,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Una clásica pizza con salsa de tomate y mozzarella fresca.',
                 'price' => 8.99,
                 'available' => true,
-                'image' => 'products_assets/margarita.webp',
+                'image' => 'products/margarita.webp',
                 'slug' => 'margarita', // Este ya tiene slug
                 'category_id' => 1
             ],
@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Pizza con pepperoni picante y queso mozzarella derretido.',
                 'price' => 9.99,
                 'available' => true,
-                'image' => 'products_assets/pepperoni.webp',
+                'image' => 'products/pepperoni.webp',
                 'slug' => 'pizza-pepperoni',
                 'category_id' => 1
             ],
@@ -35,7 +35,7 @@ class ProductSeeder extends Seeder
                 'description' => 'La combinación perfecta de jamón y piña con mozzarella.',
                 'price' => 10.99,
                 'available' => true,
-                'image' => 'products_assets/hawaiana.webp',
+                'image' => 'products/hawaiana.webp',
                 'slug' => 'pizza-hawaiana',
                 'category_id' => 1
             ],
@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Una mezcla gourmet de cuatro quesos diferentes.',
                 'price' => 11.99,
                 'available' => true,
-                'image' => 'products_assets/cuatro-quesos.webp',
+                'image' => 'products/cuatro-quesos.webp',
                 'slug' => 'pizza-cuatro-quesos',
                 'category_id' => 2
             ],
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Pizza con salsa de trufa negra y mozzarella de búfala.',
                 'price' => 13.99,
                 'available' => true,
-                'image' => 'products_assets/trufa-negra.webp',
+                'image' => 'products/trufa-negra.webp',
                 'slug' => 'pizza-trufa-negra',
                 'category_id' => 2
             ],
@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Tomate cherry, mozzarella fresca y albahaca sobre una base crujiente.',
                 'price' => 12.99,
                 'available' => true,
-                'image' => 'products_assets/caprese.webp',
+                'image' => 'products/caprese.webp',
                 'slug' => 'pizza-caprese',
                 'category_id' => 2
             ],
@@ -75,7 +75,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Lasagna casera rellena de carne, queso y nuestra especial salsa boloñesa.',
                 'price' => 7.99,
                 'available' => true,
-                'image' => 'products_assets/lasagna.webp',
+                'image' => 'products/lasagna.webp',
                 'slug' => 'lasagna',
                 'category_id' => 3
             ],
@@ -84,7 +84,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Stromboli relleno con queso mozzarella, pepperoni y salsa marinara.',
                 'price' => 8.99,
                 'available' => true,
-                'image' => 'products_assets/stromboli.webp',
+                'image' => 'products/stromboli.webp',
                 'slug' => 'stromboli',
                 'category_id' => 3
             ],
@@ -93,7 +93,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Empanada italiana frita rellena de mozzarella y salsa de tomate.',
                 'price' => 6.99,
                 'available' => true,
-                'image' => 'products_assets/panseroti.webp',
+                'image' => 'products/panseroti.webp',
                 'slug' => 'panseroti',
                 'category_id' => 3
             ],

@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Http\Requests\UpdateProductRequest;
 
 class ProductController extends Controller
 {
@@ -22,11 +23,12 @@ class ProductController extends Controller
         return view('products.create', compact('categories'));
     }
 
-    public function store(StoreProductRequest $request)
+    public function stores(StoreProductRequest $request)
     {
+        echo "prueba";
         $product = Product::create($request->all());
         $product->save();
-        return redirect()->route('menu');
+        return back();
     }
 
     public function show($slug)
@@ -38,13 +40,22 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
-        return view('products.edit', compact('product'));
+        $categories = Category::all();
+        return view('products.edit', compact('product', 'categories'));
     }
 
-
-    public function update(Request $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        // Implementar si es necesario
+        dd($request->all(), $product);
+        // La validación ya se ha manejado por `UpdateProductRequest`
+        $data = $request->validated();
+        // Actualizar el slug si el nombre del producto ha cambiado
+        if ($product->name !== $data['name']) {
+            $data['slug'] = Str::slug($data['name'], '-');
+        }
+        $product->update($data);
+        // Redirigir a una ruta deseada con un mensaje
+        return redirect()->route('admin.index');
     }
 
     public function destroy($id)
